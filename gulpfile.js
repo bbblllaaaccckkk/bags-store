@@ -26,7 +26,15 @@ gulp.task('pages', function () {
 gulp.task('js', function () {
     gulp.src('app/script/*js')
         .pipe(rigger())
-        .pipe(gulp.dest('build/script'));
+        .pipe(gulp.dest('build/script'))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('php', function () {
+    gulp.src('app/*php')
+        .pipe(rigger())
+        .pipe(gulp.dest('build/'))
+        .pipe(reload({stream: true}));
 });
 
 
@@ -89,6 +97,8 @@ gulp.task('browser-sync', function(){
 gulp.task('watch',function(){
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/styles/*.scss', ['reload-css']);
+    gulp.watch('app/script/*.js', ['js']);
+    gulp.watch('app/*.php', ['php']);
     // gulp.watch('app/images/**/*', ['images']);
 });
 
@@ -98,7 +108,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('run', function(){
-    runSequence('clean', 'images', 'js', 'html', 'pages','fonts', 'browser-sync', 'watch', 'reload-css');
+    runSequence('clean', 'images', 'js', 'php', 'html', 'pages','fonts', 'browser-sync', 'watch', 'reload-css');
 });
 
 gulp.task('default', ['run']); 

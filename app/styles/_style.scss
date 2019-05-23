@@ -6,6 +6,10 @@ body {
     line-height: 24px;
 }
 
+.dark-bg {
+    background: rgba($color: #000000, $alpha: 0.8) !important;
+}
+
 .all-wrapper {
     margin: 0 auto;
     width: 480px;
