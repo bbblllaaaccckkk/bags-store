@@ -1,0 +1,807 @@
+// all style start
+
+body {
+    background: #ddd;
+    font-family: 'Gotham Pro', 'sans-serif' ;
+    line-height: 24px;
+}
+
+.all-wrapper {
+    margin: 0 auto;
+    width: 480px;
+    background: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: center;
+
+    span {
+        display: block;
+        font-size: 32px;
+        line-height: 38px;
+        color: $colorPink;
+        font-weight: 700;
+    }
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 78px;
+    border: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #f3c632;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#efaf21), to(#f3c632));
+    background-image: -webkit-linear-gradient(bottom, #efaf21 0%, #f3c632 100%);
+    background-image: -moz-linear-gradient(bottom, #efaf21 0%, #f3c632 100%);
+    background-image: -o-linear-gradient(bottom, #efaf21 0%, #f3c632 100%);
+    background-image: linear-gradient(to top, #efaf21 0%, #f3c632 100%);
+    -webkit-box-shadow: 0 5px 0 #e0a216;
+    -moz-box-shadow: 0 5px 0 #e0a216;
+    box-shadow: 0 5px 0 #e0a216;
+    font-family: 'Gotham Pro', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 78px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 2px 0 #e7b035;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+// all atyles end
+
+
+// первая секция header, start
+.offer-section {
+    padding: 0 0 30px;
+    background: #f0f3ee url(../images/offer__bottom_bg.jpg) center bottom no-repeat;
+
+
+    .offer-title {
+        padding: 15px 0;
+        text-transform: uppercase;
+        text-align: center;
+
+        h1 {
+            margin: 0 0 5px;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 2px;
+            color: $colorPink;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+
+    .discount-price {
+        position: relative;
+
+        .girl-img {
+            border-top: 2px solid $colorPink;
+        }
+
+        .black-bag {
+            position: absolute;
+            width: 200px;
+            right: 17px;
+            top: 10px;
+        }
+
+        .discount-circle {
+            width: 90px;
+            height: 90px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: #f3c531;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            position: absolute;
+            top: 15px;
+            left: 185px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .discount-avail {
+            background: rgba($color: #f800c2, $alpha: 0.7);
+            position: absolute;
+            padding: 5px;
+            bottom: 6px;
+            left: 0;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-bottom: 57px solid rgba($color: #f800c2, $alpha: 0.7); 
+                border-right: 30px solid transparent;
+                right: -30px;
+                bottom: 0;
+            }
+        }
+    }
+
+    .img-pandora {
+        transform: translateY(-6px);
+    }
+
+    .price-block {
+        margin: 30px 0;
+        background: url(../images/offer__price_arrow.png) center no-repeat;
+        display: flex;
+
+        .price-item-old {
+            padding: 0 40px 0 0;
+            text-align: right;
+
+            .text {
+                margin: 0 0 4px;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+
+            .value {
+                text-decoration: line-through;
+                font-size: 34px;
+                line-height: 34px;
+            }
+        }
+
+        .price-item-new {
+            padding: 0 0 0 40px;
+            color: $colorPink;
+
+            .text {
+                margin: 0 0 4px;
+                font-size: 14px;
+                line-height: 14px;
+                text-transform: uppercase;
+            }
+
+            .value {
+                font-weight: 700;
+                font-size: 34px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .order_form {
+
+        .field::placeholder {
+            opacity: 1;
+            color: #727272;
+        }
+
+        .field[name="name"] {
+            background: #fff url(../images/offer__name_icon.png) 20px center no-repeat;
+        }
+
+        .field {
+            display: block;
+            margin: 0 auto 10px;
+            padding: 0 20px 0 64px;
+            width: 315px;
+            height: 64px;
+            border: 1px solid #ececec;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            font-family: 'Gotham Pro', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #727272;
+        }
+
+
+        .field[name="phone"] {
+            background: #fff url(../images/offer__phone_icon.png) 18px center no-repeat;
+        }
+    }
+
+    .products-count {
+        margin: 25px 0 0;
+        text-align: center;
+    }
+}
+// первая секция header, end
+
+
+// section-about, start
+.section-about {
+    padding: 30px 0 0;
+
+    h2 {
+        margin: 0 20px 20px;
+    }
+
+    p {
+        margin: 0 20px 20px;
+        text-align: center;
+    }
+
+    .about-img-block {
+        background: url(../images/beer.jpg) right no-repeat;
+        background-position-x: -150px;
+        background-position-y: -80px;
+        height: 365px;
+        width: 100%;
+
+        img {
+            width: 200px;
+            margin-top: 64px;
+        }
+    }
+}
+// section-about, end
+
+
+//benefits start
+.section-benefit {
+    padding-top: 20px;
+
+    h2 {
+        margin: 0 0 30px;
+
+        span {
+            color: $colorYellow;
+        }
+    }
+
+    .benefit-product {
+        font-size: 0;
+        line-height: 0;
+        letter-spacing: -1px;
+        text-align: center;
+
+        .benefit-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px 30px;
+            width: 210px;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: normal;
+
+            img {
+                width: 100%;
+                display: block;
+                margin: 0 auto 15px;
+                border: 1px solid $colorYellow;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+                border-radius: 6px;
+                background: url(../images/bg-min.png);
+
+                &:hover {
+                    background: rgba($color: #cf90be, $alpha: 0.7);
+                }
+            }
+        }
+    }
+}
+//benefits end
+
+
+//characteristics start
+.characteristics_section {
+    padding: 35px 0 30px;
+
+    h2 {
+        padding-bottom: 15px;
+    }
+
+    // style for slider start-------
+    .wrapper-slider {
+        background: #cf90be;
+        height: 330px;
+        padding: 10px 0;
+
+        #desktop {
+            display: none;
+        }
+
+        #slider { //положение слайдера
+            position: relative;
+            text-align: center;
+            top: 10px;
+
+            input {
+                display: none;
+            }
+        }
+        
+        #slider{ //центровка слайдера
+            margin: 0 auto;
+        }
+        
+        #slides article{ //все изображения справа друг от доруга
+            width: 20%;
+            float: left;
+        }
+        
+        #slides .image{ //устанавливает общий размер блока с изображениями
+            width: 500%;
+            line-height: 0;
+        }
+        
+        #overflow{ //сркывает все, что находится за пределами этого блока
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        article img{ //размер изображений слайдера
+            width: 300px;
+        }
+        
+        // #desktop:checked ~ #slider{ //размер всего слайдера
+        //     max-width: 960px; //максимальнная длинна
+        // }
+        
+        //настройка переключения и положения для левой стрелки
+        //если свич1-5 активны, то идет обращение к лейблу из блока с id контролс
+        #switch1:checked ~ #controls label:nth-child(5), 
+        #switch2:checked ~ #controls label:nth-child(1),
+        #switch3:checked ~ #controls label:nth-child(2),
+        #switch4:checked ~ #controls label:nth-child(3){
+            background: url('../images/slider__arrows.png') no-repeat; //заливка фона картинкой без повторений
+            float: left;
+            margin: -60px 0 0 15px; //сдвиг влево
+            display: block;
+            height: 68px;
+            width: 55px;
+        }
+        
+        //настройка переключения и положения для правой стрелки
+        #switch1:checked ~ #controls label:nth-child(2), 
+        #switch2:checked ~ #controls label:nth-child(3),
+        #switch3:checked ~ #controls label:nth-child(4),
+        #switch5:checked ~ #controls label:nth-child(1){
+            background: url('../images/slider__arrows.png') -55px no-repeat; //заливка фона картинкой без повторений
+            float: right;
+            margin: -60px 15px 0px 0px; //сдвиг вправо
+            display: block;
+            height: 68px;
+            width: 55px;
+        }
+        
+        label, a{ //при наведении на стрелки или переключатели - курсор изменится
+            cursor: pointer;
+        }
+        
+        .all input{ //скрывает стандартные инпуты (чекбоксы) на странице
+            display: none;
+        }
+        
+        //позиция изображения при активации переключателя
+        #switch1:checked ~ #slides .image{
+            margin-left: 0;
+        }
+        
+        #switch2:checked ~ #slides .image{
+            margin-left: -100%;
+        }
+        
+        #switch3:checked ~ #slides .image{
+            margin-left: -200%;
+        }
+        
+        #switch4:checked ~ #slides .image{
+            margin-left: -300%;
+        }
+        
+        #switch5:checked ~ #slides .image{
+            margin-left: -400%;
+        }
+        
+        #controls{ //положение блока всех управляющих элементов
+            margin: -25% 0 0 0;
+            width: 100%;
+            height: 50px;
+        }
+        
+        #slides .image{ //анимация пролистывания изображений
+            transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+        }
+        
+        #controls label:hover{ //прозрачность стрелок при наведении
+            opacity: 1.0;
+        }
+        
+        #controls label{ //прозрачность стрелок при отводе курсора
+            transition: opacity 0.2s ease-out;
+            opacity: 0.6;
+        }
+
+
+    }
+    // style for slider end---------
+
+    ul {
+        margin: 30px 20px 10px 20px;
+        
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 15px 5px;
+            padding: 0 0 2px;
+            border-bottom: 1px dashed #ececec;
+        }
+
+        li > :first-child {
+            font-weight: 600;
+
+            .fa-chevron-right {
+                color: $colorPink;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+//characteristics end
+
+// bracelet start
+.section-bracelet {
+    background: #f3f3f3;
+
+    h2 {
+        padding: 30px 20px;
+
+        span {
+            color: $colorYellow;
+        }
+    }
+}
+// bracelet end
+
+
+// reviews start
+.section-reviews {
+    padding: 30px 0 0;
+    // background: #f3f3f3;
+    background-image: -webkit-linear-gradient(top, #f3f3f3 0%, #fff 230px);
+    background-image: -moz-linear-gradient(top, #f3f3f3 0%, #fff 230px);
+    background-image: -o-linear-gradient(top, #f3f3f3 0%, #fff 230px);
+    background-image: linear-gradient(to bottom, #f3f3f3 0%, #fff 230px);
+
+    h2 {
+        margin: 0 0 30px;
+    }
+
+    .reviews-item {
+        margin: 0 0 30px;
+        padding-bottom: 30px;
+        background: url(../images/reviews__quote_icon.png) 393px 10px no-repeat;
+
+        .author-block {
+
+            .avatar {
+                display: block;
+                float: left;
+                margin: 0 0 0 20px;
+                width: 116px;
+                border: 3px solid #e2e2e5;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                position: relative;
+                z-index: 10;
+            }
+
+            .autor-name {
+                float: left;
+                margin: 38px 0 0 15px;
+                font-size: 18px;
+                line-height: 18px;
+
+                .stars {
+                    color: $colorYellow;
+                    padding-bottom: 5px;
+                }
+            }
+
+            .container {
+                display: flex;
+                justify-content: center;
+                transform: translateY(-20px);
+                background: rgba($color: #cf90be, $alpha: 0.7);
+            }
+
+            .photo {
+                display: block;
+                position: relative;
+                margin: 10px auto;
+                box-shadow: 0 0 10px 5px rgb(90, 83, 83);
+            }
+
+            p {
+                text-align: center;
+                margin: -21px 0px;
+                padding: 40px 0;
+                background: #f8f8f8;
+            }
+        }
+    }
+}
+// reviews end
+
+
+// order_info start
+.section-order-info {
+    padding: 30px 20px;
+
+    h2 {
+        margin: 0 0 30px;
+
+        span {
+            color: $colorYellow;
+        }
+    }
+
+    .info-list {
+
+        .info-item {
+            display: flex;
+            margin: 0 0 25px;
+           
+            img {
+                margin: -2px 15px 0 0;
+                width: 83px;
+                height: 83px;
+            }
+
+            .text-block {
+                width: 342px;
+            }
+        }
+    }
+}
+// order_info end
+
+
+// footer start
+.footer {
+    padding: 25px 0;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+        margin: 0 auto 10px auto;
+    }
+
+    a {
+        color: black;
+    }
+}
+// footer end
+
+
+// popup start
+#m1-form {
+    position: fixed;
+    display: none;
+    width: 450px;
+    margin-left: -225px;
+    // margin-top: 20px;
+    // top: 50%;
+    top: 10%;
+    left: 50%;
+    background: #fff;
+    z-index: 9999999;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.overlay-popup-m1 {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+    z-index: 999999;
+}
+
+#m1-form a.close-m1::before {
+    content: '\00D7';
+}
+
+#m1-form a.close-m1 {
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    top: 3px;
+    right: 3px;
+    background: transparent;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#m1-form a.close-m1 {
+    line-height: 26px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+#m1-form > div {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#m1-form .popup-m1-title::after {
+    right: 0;
+    transform: skew(0deg, -4deg);
+}
+
+#m1-form .popup-m1-title::before,
+#m1-form .popup-m1-title::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 20px;
+    bottom: -10px;
+    background: #64ca50;
+}
+
+#m1-form .popup-m1-title::before {
+    left: 0;
+    transform: skew(0deg, 4deg);
+}
+
+#m1-form .popup-m1-cont div.popup-m1-text1 {
+    text-align: center;
+}
+
+#m1-form .popup-m1-title {
+    position: relative;
+    padding: 20px 0px 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.7px;
+    line-height: 1.3em;
+    color: #fff;
+    background: #64ca50;
+}
+
+#m1-form .popup-m1-cont {
+    position: relative;
+    padding: 45px 20px 30px;
+    color: #333;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+
+#m1-form .popup-m1-form input[type="text"] {
+    width: 90%;
+    height: 64px;
+    margin-bottom: 16px;
+    line-height: 64px;
+    font-size: 17px;
+    color: #222;
+    background: #fff;
+    text-indent: 20px;
+    border: 1px solid #ccc;
+    text-shadow: none;
+    border-radius: 5px;
+}
+
+#m1-form .popup-m1-form button:hover {
+    background: #ff8f00;
+}
+
+#m1-form .popup-m1-form button {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    width: 91%;
+    height: 68px;
+    line-height: 68px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    border: none;
+    border-bottom: 3px solid #cd6c00;
+    background: #ff8300;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+    text-shadow: 0px 0px 0px;
+}
+
+#m1-form .popup-m1-cont div.popup-m1-text2::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin: 0 3px 0 0;
+    top: 2px;
+    background: url(../images/popup-m1-phone.png) no-repeat;
+}
+
+#m1-form .popup-m1-form::after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0px;
+}
+
+#m1-form .popup-m1-form {
+    position: relative;
+    display: block;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 30px 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 0 0;
+    -moz-box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 0;
+}
+
+// popup end

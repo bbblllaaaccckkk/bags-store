@@ -1,8 +1,4 @@
-# instruction:
-
-## Clone the project:
-
-git clone https://github.com/bbblllaaaccckkk/bags-store.git
+﻿# instruction:
 
 ## Upload npm packages:
 
@@ -11,3 +7,7 @@ npm install
 ## Run the project:
 
 gulp run
+
+
+
+
